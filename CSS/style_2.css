@@ -15,7 +15,7 @@ body{
     height: 1024px;
     border-radius: 30px;
     display: flex;
-    margin: 0 auto;
+    margin: auto auto;
 }
 
 ul{
@@ -137,7 +137,7 @@ b:hover{
     color: white;
 }
 
-#button{
+.button{
     text-decoration: none;
     border: 3px solid #FFFFFF;
     width: 500px;
@@ -150,8 +150,28 @@ b:hover{
     font-weight: 700;
     line-height: 79px;
     align-self: center;
-    color:white;
-    
+    color:white; 
+    animation-name: jumping;
+    animation-duration: 2s;
+    animation-iteration-count: 1; 
+}
+@keyframes jumping{
+    0%{
+        width: 500px;
+        height: 64px;  
+        background-color: none;
+        border: 3px solid #FFFFFF; 
+    }
+    65%{
+        width: 700px;
+        height: 64px;
+        /* background-color: rgb(8, 12, 73); */
+        border: 3px solid #fa2ae9f6;
+    }
+    100%{
+        background-color: none;
+        border: 3px solid #FFFFFF;
+    }
 }
 
 #button:hover{
@@ -227,6 +247,23 @@ h2{
 hr{
     width: 50px;
     border: 4px solid rgb(202, 60, 202);
+    animation-name: line;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    }
+    @keyframes line {
+        0%{
+            width: 60px;
+            border: 4px solid #180541;
+        }
+        30%{
+            width: 200px;
+            border: 4px solid #180541;
+        }
+        100%{
+            width: 50px;
+            border: 4px solid rgb(202, 60, 202); 
+        }
     }
 
 .topic_text{
